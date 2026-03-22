@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd 
 import random 
-from report lab.platibus import SimpleDocTemplate, Table, TableStyle 
+from reportlab.platibus import SimpleDocTemplate, Table, TableStyle 
 from reportlab.lib import Colors
 
 st.set_page_config(layout="wide")
