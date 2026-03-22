@@ -8,19 +8,19 @@ st.set_page_config(layout="wide")
 
 st.sidebar.header("⚙️ Configurazione")
 
-Persone modificabili
+#Persone modificabili
 
 people_input = st.sidebar.text_area( "Persone (una per riga)", value="Paolo\nMarco\nGianfranco\nClaudio\nCarmelo" ) people = [p.strip() for p in people_input.split("\n") if p.strip()]
 
-Senior modificabili
+#Senior modificabili
 
 senior_input = st.sidebar.text_input( "Senior (separati da virgola)", value="Paolo,Gianfranco,Carmelo" ) senior = {s.strip() for s in senior_input.split(",") if s.strip()}
 
-Orari modificabili
+#Orari modificabili
 
 m_time = st.sidebar.text_input("Orario Mattina", "08:00-15:10") p_time = st.sidebar.text_input("Orario Pomeriggio", "11:00-18:10")
 
-Giorni
+#Giorni
 
 custom_days = st.sidebar.text_input( "Giorni (separati da virgola)", value="Lun,Mar,Mer,Gio,Ven,Sab,Dom" ) days = [d.strip() for d in custom_days.split(",") if d.strip()]
 
@@ -34,7 +34,7 @@ key_df = f"df_{len(people)}_{len(days)}" if key_df not in st.session_state: st.s
 
 df = st.session_state[key_df]
 
-Se cambiano persone/giorni, riallinea
+#Se cambiano persone/giorni, riallinea
 
 if list(df.index) != people or list(df.columns) != days: df = pd.DataFrame("", index=people, columns=days) st.session_state[key_df] = df
 
