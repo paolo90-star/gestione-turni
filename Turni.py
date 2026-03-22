@@ -6,8 +6,6 @@ from reportlab.lib import Colors
 
 st.set_page_config(layout="wide")
 
-===================== CONFIG DINAMICA =====================
-
 st.sidebar.header("⚙️ Configurazione")
 
 Persone modificabili
